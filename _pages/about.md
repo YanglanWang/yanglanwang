@@ -16,6 +16,15 @@ selected_papers:
   enabled: true # includes a list of papers marked as "selected={true}"
   # limit: 3 # leave blank to include all the news in the `_news` folder
 
+
+layout: about
+title: about
+service:
+  - Reviewer for Transportation Research Part B
+  - Reviewer for IEEE ITSC 2025
+  - Reviewer for IEEE IV 2026
+  - Reviewer for IEEE ITSC 2026
+
 social: true # includes social icons at the bottom of the page
 
 # announcements:
@@ -29,10 +38,10 @@ social: true # includes social icons at the bottom of the page
 #   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a Ph.D. candidate at UC Berkeley advised by Prof. Kenichi Soga.
-		 Prior to this, I obtained my master degree from Tsinghua University and bachelor degree from North China Electric Power University (Beijing). My research direction lies in traffic control, optimization and simulation. I did project on vehicle 
-		ridesharing algorithm, fire evacuation algorithm and micro traffic simulation previously. I explore how	to use reinforcement learning to optimize the vehicle' s movement recently. 
 
+I am a Ph.D. candidate at the University of California, Berkeley, advised by Kenichi Soga. Prior to this, I earned my master’s degree from Tsinghua University and my bachelor’s degree from North China Electric Power University. 
+
+My research focuses on <strong>traffic simulation and control</strong>, with strong expertise in <strong>traffic flow modeling, computation, and optimization</strong>. During my Ph.D., I have primarily investigated large-scale traffic simulation and optimization, with applications in <strong>traffic signal control</strong> and <strong>intersection operations</strong>. I have also worked on projects involving vehicle ridesharing algorithms, fire evacuation modeling, and microscopic traffic simulation. More recently, building on my experience with traditional methods, I have been exploring the use of reinforcement learning to optimize vehicle movement.
 
 <!-- Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically. -->
 <!-- 
