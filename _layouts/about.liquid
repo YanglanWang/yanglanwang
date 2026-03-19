@@ -64,6 +64,48 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
+{%- comment -%}
+  Moved reviewer map here so it appears after selected publications
+{%- endcomment -%}
+
+<div id="reviewer-map" style="height:250px;max-width:100%;margin-top:1rem;"></div>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const map = L.map('reviewer-map', { 
+  scrollWheelZoom: false,
+  worldCopyJump: false,
+  maxBounds: [[-90, -180], [90, 180]],
+  maxBoundsViscosity: 1.0
+}).setView([20, 0], 1);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+    maxZoom: 13,
+    noWrap: true
+  }).addTo(map);
+
+  const locations = [
+    {lat: 37.8715, lng: -122.2730, label: 'UC Berkeley'},
+    {lat: 39.9042, lng: 116.4074, label: 'Beijing'},
+    {lat: -33.8688, lng: 151.2093, label: 'Sydney'},
+    {lat: 30.2672, lng: -97.7431, label: 'Austin, TX'}
+  ];
+
+  locations.forEach(function(loc){
+    L.circleMarker([loc.lat, loc.lng], {
+      radius: 6,
+      fillColor: '#e74c3c',
+      color: '#c0392b',
+      weight: 1,
+      fillOpacity: 0.9
+    }).addTo(map).bindPopup(loc.label);
+  });
+
+  map.zoomControl.setPosition('bottomleft');
+  });
+  </script>
+
     <!-- Social -->
     {% if page.social %}
       <div class="social">
